@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5eb3e4adf848422cb913175ef5e0e311 {
+                    width: 100.0%;
+                    height: 90.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+    <link rel='stylesheet', href='style.css'>
+        
+        
+</head>
+<body>    
+              <div class="topnav">
+                <h1>CritterMap</h1>
+                <h1>Select a</h1>
+
+                <div class="dropdown">
+                  <button class="button" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Species
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="goose.html">Goose</a>
+                    <a class="dropdown-item" href="rabbit.html">Rabbit</a>
+                    <a class="dropdown-item" href="goat.html">Goat</a>
+                  </div>
+                </div>
+
+                <div class=main>
+                <h1>or go back to the<h1>
+                <button class="button" onclick="location.href = 'index.html';">main page</button>
+                </div>
+
+                <div class=viewing>
+                <h1>You are currently viewing dogs</h1>
+                </div>
+
+
+            </div>
+            <div class="folium-map" id="map_5eb3e4adf848422cb913175ef5e0e311" ></div>
+        
+</body>
+<script>    
+    
+            var map_5eb3e4adf848422cb913175ef5e0e311 = L.map(
+                "map_5eb3e4adf848422cb913175ef5e0e311",
+                {
+                    center: [51.5, -0.1],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1339c516c05f42319bf13e8d8b972f10 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_5eb3e4adf848422cb913175ef5e0e311);
+        
+    
+            var circle_219efde937834bb4a041432ca8d90220 = L.circle(
+                [61.0, 8.0],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_5eb3e4adf848422cb913175ef5e0e311);
+        
+    
+        var popup_af50c4945b45459595ba634472653000 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ea7d192b20c046fc965bc786b2be836e = $(`<div id="html_ea7d192b20c046fc965bc786b2be836e" style="width: 100.0%; height: 100.0%;">Norway has the following animals: Norsk elghund gra, Lundehund, Haldenstover, Norsk buhund, Dunker, Norsk elghund sort, Hygenhund, </div>`)[0];
+            popup_af50c4945b45459595ba634472653000.setContent(html_ea7d192b20c046fc965bc786b2be836e);
+        
+
+        circle_219efde937834bb4a041432ca8d90220.bindPopup(popup_af50c4945b45459595ba634472653000)
+        ;
+
+        
+    
+    
+            var circle_f4be2b41b89e494c90d215a6a5a9ee07 = L.circle(
+                [64.0, 26.0],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_5eb3e4adf848422cb913175ef5e0e311);
+        
+    
+        var popup_cb8fe50049c34e57bbc46df3da78dc9f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8e5b9ca5698146e2921123fe74555374 = $(`<div id="html_8e5b9ca5698146e2921123fe74555374" style="width: 100.0%; height: 100.0%;">Finland has the following animals: Suomenajokoira, Suomenlapinkoira, Karjalankarhukoira, Suomenpystykorva, Lapinporokoira, </div>`)[0];
+            popup_cb8fe50049c34e57bbc46df3da78dc9f.setContent(html_8e5b9ca5698146e2921123fe74555374);
+        
+
+        circle_f4be2b41b89e494c90d215a6a5a9ee07.bindPopup(popup_cb8fe50049c34e57bbc46df3da78dc9f)
+        ;
+
+        
+    
+    
+            var circle_ce4422c789cd458aadda25708079be72 = L.circle(
+                [-6.0, 147.0],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_5eb3e4adf848422cb913175ef5e0e311);
+        
+    
+        var popup_b6a97cc0ee2e4c15867a6e911733490a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0ecccc5a5b124c01acfde308044d39b1 = $(`<div id="html_0ecccc5a5b124c01acfde308044d39b1" style="width: 100.0%; height: 100.0%;">Papua New Guinea has the following animals: New Guinea Singing dog, </div>`)[0];
+            popup_b6a97cc0ee2e4c15867a6e911733490a.setContent(html_0ecccc5a5b124c01acfde308044d39b1);
+        
+
+        circle_ce4422c789cd458aadda25708079be72.bindPopup(popup_b6a97cc0ee2e4c15867a6e911733490a)
+        ;
+
+        
+    
+    
+            var circle_78d6e985d8b24ad8a896dfba941853cf = L.circle(
+                [56.0, 10.0],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_5eb3e4adf848422cb913175ef5e0e311);
+        
+    
+        var popup_5f331af115e640eca47bff3e43b41aad = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0a3a7fc6e7f54bb98ea3caf0af796130 = $(`<div id="html_0a3a7fc6e7f54bb98ea3caf0af796130" style="width: 100.0%; height: 100.0%;">Denmark has the following animals: Broholmeren, Gammel Dansk Hønsehund, Dansk Spids, Dansk/Svensk Gårdhund, </div>`)[0];
+            popup_5f331af115e640eca47bff3e43b41aad.setContent(html_0a3a7fc6e7f54bb98ea3caf0af796130);
+        
+
+        circle_78d6e985d8b24ad8a896dfba941853cf.bindPopup(popup_5f331af115e640eca47bff3e43b41aad)
+        ;
+
+        
+    
+    
+            var circle_49ac52a872054d8cb0d7c0277b9a823c = L.circle(
+                [46.05, 14.5],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_5eb3e4adf848422cb913175ef5e0e311);
+        
+    
+        var popup_a1005e365c18448a86e4854ef42a27bc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7a5500c909ce48abb4c3919354630a03 = $(`<div id="html_7a5500c909ce48abb4c3919354630a03" style="width: 100.0%; height: 100.0%;">Slovenia has the following animals: kraševec, </div>`)[0];
+            popup_a1005e365c18448a86e4854ef42a27bc.setContent(html_7a5500c909ce48abb4c3919354630a03);
+        
+
+        circle_49ac52a872054d8cb0d7c0277b9a823c.bindPopup(popup_a1005e365c18448a86e4854ef42a27bc)
+        ;
+
+        
+    
+    
+            var circle_11d5597b12d8421cbd12840103ec4b6f = L.circle(
+                [23.7, 90.3],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_5eb3e4adf848422cb913175ef5e0e311);
+        
+    
+        var popup_987012dc13804c64a7bcb409cfb94212 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f42dcab38e3e41b689aca23e7295e378 = $(`<div id="html_f42dcab38e3e41b689aca23e7295e378" style="width: 100.0%; height: 100.0%;">Bangladesh has the following animals: Sarail, Indigenous, German Shephard, Elsesian, </div>`)[0];
+            popup_987012dc13804c64a7bcb409cfb94212.setContent(html_f42dcab38e3e41b689aca23e7295e378);
+        
+
+        circle_11d5597b12d8421cbd12840103ec4b6f.bindPopup(popup_987012dc13804c64a7bcb409cfb94212)
+        ;
+
+        
+    
+    
+            var circle_e2aa2d4e234747749543d4a97a9455e3 = L.circle(
+                [52.3167, 5.55],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_5eb3e4adf848422cb913175ef5e0e311);
+        
+    
+        var popup_83232165f6a84b979fcfcdbbc44af55f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_baa45fc3f89143d381d8455997e82b8f = $(`<div id="html_baa45fc3f89143d381d8455997e82b8f" style="width: 100.0%; height: 100.0%;">Netherlands has the following animals: Saarloos Wolfhond, Stabijhoun, Markiesje, Hollandse herder (korthaar, Hollandse Smoushond, Nederlandse Schapendoes, Drentsche Patrijshond, Wetterhoun, Boerenfox, Kooikerhondje, </div>`)[0];
+            popup_83232165f6a84b979fcfcdbbc44af55f.setContent(html_baa45fc3f89143d381d8455997e82b8f);
+        
+
+        circle_e2aa2d4e234747749543d4a97a9455e3.bindPopup(popup_83232165f6a84b979fcfcdbbc44af55f)
+        ;
+
+        
+    
+    
+            var circle_e9b432747d0e4925b9516fe988b1e957 = L.circle(
+                [47.0, 20.0],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_5eb3e4adf848422cb913175ef5e0e311);
+        
+    
+        var popup_8b44689bc39f4411b577ffa312e6394b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e391b92d6fd94e9bb7dc495da2a9ab9a = $(`<div id="html_e391b92d6fd94e9bb7dc495da2a9ab9a" style="width: 100.0%; height: 100.0%;">Hungary has the following animals: Magyarországi Drótszőrű Magyarvizsla Tenyésztők Egyesülete, Transylvanian kopó, Pumi, Kuvasz, Puli, Mudi, Komondor, Hungarian houn, Hungarian vizsla, </div>`)[0];
+            popup_8b44689bc39f4411b577ffa312e6394b.setContent(html_e391b92d6fd94e9bb7dc495da2a9ab9a);
+        
+
+        circle_e9b432747d0e4925b9516fe988b1e957.bindPopup(popup_8b44689bc39f4411b577ffa312e6394b)
+        ;
+
+        
+    
+    
+            var circle_637cd8a8e7214209b2be4d8cc154152a = L.circle(
+                [43.3503, 79.0804],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_5eb3e4adf848422cb913175ef5e0e311);
+        
+    
+        var popup_e2473f5842054390adf4a319929d42fc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4873a78664c3458fb141b477d0b08167 = $(`<div id="html_4873a78664c3458fb141b477d0b08167" style="width: 100.0%; height: 100.0%;">Kazakhstan has the following animals: Kazakhski Tobet, </div>`)[0];
+            popup_e2473f5842054390adf4a319929d42fc.setContent(html_4873a78664c3458fb141b477d0b08167);
+        
+
+        circle_637cd8a8e7214209b2be4d8cc154152a.bindPopup(popup_e2473f5842054390adf4a319929d42fc)
+        ;
+
+        
+    
+    
+            var circle_7ab7e90b2dff496a8fb8cccfada494df = L.circle(
+                [40.0, -4.0],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_5eb3e4adf848422cb913175ef5e0e311);
+        
+    
+        var popup_3d9e3a6a81e54478ac73ed05110433d7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5c08cf344aef44b58fa6b02d206756cc = $(`<div id="html_5c08cf344aef44b58fa6b02d206756cc" style="width: 100.0%; height: 100.0%;">Spain has the following animals: Gos d'Atura Catalá (Perro de Pastor Catalán), Pachón Navarro, Ca de Bou (Perro de Presa Mallorquín), Perro de Agua Español, Presa Canario, Euskal Artzain Txakurra (variedad Gorbeiakoa), Ca Eivissenc (Podenco Ibicenco), Perro Majorero, Podenco Paternino, Galgo Español, Ratonero - Bodeguero Andaluz, Sabueso Español, Podenco Valenciano, Ca de bestiar (Perro de Pastor Mallorquín), Podenco Canario, Pastor Garafiano, Villano de las Encartaciones, Ca Rater Mallorquí (Ratonero Mallorquín), Can de Palleiro, Mastín Español, Can de Guicho, Perdiguero de Burgos, Podenco Andaluz, Ca Mè Mallorquí, Perdigueiro Galego, Mastín del Pirineo, Podenco Galego, Alano Español, Euskal Artzain Txakurra (variedad Iletsua), Perro de Agua del Cantábrico, Gos Rater Valencià (Ratonero Valenciano), </div>`)[0];
+            popup_3d9e3a6a81e54478ac73ed05110433d7.setContent(html_5c08cf344aef44b58fa6b02d206756cc);
+        
+
+        circle_7ab7e90b2dff496a8fb8cccfada494df.bindPopup(popup_3d9e3a6a81e54478ac73ed05110433d7)
+        ;
+
+        
+    
+    
+            var circle_a982ebc8ae5646388c1f9e111edb1bba = L.circle(
+                [42.75, 25.5],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_5eb3e4adf848422cb913175ef5e0e311);
+        
+    
+        var popup_85bd755b6cbf4b69b494ea31dd55e9bc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_87e69a4ed1424eb99e92e132bacf1c9c = $(`<div id="html_87e69a4ed1424eb99e92e132bacf1c9c" style="width: 100.0%; height: 100.0%;">Bulgaria has the following animals: Karakachansko kuche, Balgarski barak, Balgarsko ludogorsko gonche, Balgarsko ovcharsko kuche, </div>`)[0];
+            popup_85bd755b6cbf4b69b494ea31dd55e9bc.setContent(html_87e69a4ed1424eb99e92e132bacf1c9c);
+        
+
+        circle_a982ebc8ae5646388c1f9e111edb1bba.bindPopup(popup_85bd755b6cbf4b69b494ea31dd55e9bc)
+        ;
+
+        
+    
+</script>

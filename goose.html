@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d22fc2b2bdcd40f3be3aa92916de9267 {
+                    width: 100.0%;
+                    height: 90.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+    <link rel='stylesheet', href='style.css'>
+        
+</head>
+<body>    
+            <div class="topnav">
+                <h1>CritterMap</h1>
+                <h1>Select a</h1>
+
+                <div class="dropdown">
+                  <button class="button" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Species
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="dog.html">Dog</a>
+                    <a class="dropdown-item" href="rabbit.html">Rabbit</a>
+                    <a class="dropdown-item" href="goat.html">Goat</a>
+                  </div>
+                </div>
+
+                <div class=main>
+                <h1>or go back to the<h1>
+                <button class="button" onclick="location.href = 'index.html';">main page</button>
+                </div>
+
+                <div class=viewing>
+                <h1>You are currently viewing geese</h1>
+                </div>
+
+            </div>
+            <div class="folium-map" id="map_d22fc2b2bdcd40f3be3aa92916de9267" ></div>
+        
+</body>
+<script>    
+    
+            var map_d22fc2b2bdcd40f3be3aa92916de9267 = L.map(
+                "map_d22fc2b2bdcd40f3be3aa92916de9267",
+                {
+                    center: [51.5, -0.1],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4e1dd69abf564913841d2c5f5d3fda93 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+            var circle_e831dd7434c04f02aea384bf41c4a37b = L.circle(
+                [-2.0, -77.5],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_9cce193973124bb49cad30e1d8189603 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eb60c0644ca04a6b83d0d747d65583f3 = $(`<div id="html_eb60c0644ca04a6b83d0d747d65583f3" style="width: 100.0%; height: 100.0%;">Ecuador has the following animals: Large White, </div>`)[0];
+            popup_9cce193973124bb49cad30e1d8189603.setContent(html_eb60c0644ca04a6b83d0d747d65583f3);
+        
+
+        circle_e831dd7434c04f02aea384bf41c4a37b.bindPopup(popup_9cce193973124bb49cad30e1d8189603)
+        ;
+
+        
+    
+    
+            var circle_c4419c5480184e5da5ce2a538ad8664a = L.circle(
+                [-18.0, 179.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_aff003a9e1c84aadbe1029569e1cd233 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e6af9d168d354ac58cb8a2bb69594fe1 = $(`<div id="html_e6af9d168d354ac58cb8a2bb69594fe1" style="width: 100.0%; height: 100.0%;">Fiji has the following animals: Large White, </div>`)[0];
+            popup_aff003a9e1c84aadbe1029569e1cd233.setContent(html_e6af9d168d354ac58cb8a2bb69594fe1);
+        
+
+        circle_c4419c5480184e5da5ce2a538ad8664a.bindPopup(popup_aff003a9e1c84aadbe1029569e1cd233)
+        ;
+
+        
+    
+    
+            var circle_268bf79f8ded4e30877ca6e6f739e3af = L.circle(
+                [35.0, 136.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_db21eee81a7b44bdbcfdf00596e63c81 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_56b3713f90d9420694f6fb73039d972d = $(`<div id="html_56b3713f90d9420694f6fb73039d972d" style="width: 100.0%; height: 100.0%;">Japan has the following animals: Goose, Large White, </div>`)[0];
+            popup_db21eee81a7b44bdbcfdf00596e63c81.setContent(html_56b3713f90d9420694f6fb73039d972d);
+        
+
+        circle_268bf79f8ded4e30877ca6e6f739e3af.bindPopup(popup_db21eee81a7b44bdbcfdf00596e63c81)
+        ;
+
+        
+    
+    
+            var circle_59f187a8ab3b46bcb18cb936d49f43cd = L.circle(
+                [17.05, -61.8],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_3b571389809e4b26bc3d69dff4e2960f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e06236b690454df097fc4931f9c32988 = $(`<div id="html_e06236b690454df097fc4931f9c32988" style="width: 100.0%; height: 100.0%;">Antigua and Barbuda has the following animals: White Chinese, African Goose, White Emden, Large White, </div>`)[0];
+            popup_3b571389809e4b26bc3d69dff4e2960f.setContent(html_e06236b690454df097fc4931f9c32988);
+        
+
+        circle_59f187a8ab3b46bcb18cb936d49f43cd.bindPopup(popup_3b571389809e4b26bc3d69dff4e2960f)
+        ;
+
+        
+    
+    
+            var circle_0bb0b1b5aa514073b5b4c6426dc4359c = L.circle(
+                [39.0, 22.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_88cddc54a7f44a5b9dc73b0a151b2b30 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8d7411023dbd4470a084d9644f99839b = $(`<div id="html_8d7411023dbd4470a084d9644f99839b" style="width: 100.0%; height: 100.0%;">Greece has the following animals: Large White, </div>`)[0];
+            popup_88cddc54a7f44a5b9dc73b0a151b2b30.setContent(html_8d7411023dbd4470a084d9644f99839b);
+        
+
+        circle_0bb0b1b5aa514073b5b4c6426dc4359c.bindPopup(popup_88cddc54a7f44a5b9dc73b0a151b2b30)
+        ;
+
+        
+    
+    
+            var circle_6060fd375b8c47d9a90fd171f47f9b9f = L.circle(
+                [4.0, -56.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_d62658a05b0a48cdba8806ee1b9fdc3f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_94b61700e9654c21b29bc2f7f757e70b = $(`<div id="html_94b61700e9654c21b29bc2f7f757e70b" style="width: 100.0%; height: 100.0%;">Suriname has the following animals: Large White, Grey, Chinese, </div>`)[0];
+            popup_d62658a05b0a48cdba8806ee1b9fdc3f.setContent(html_94b61700e9654c21b29bc2f7f757e70b);
+        
+
+        circle_6060fd375b8c47d9a90fd171f47f9b9f.bindPopup(popup_d62658a05b0a48cdba8806ee1b9fdc3f)
+        ;
+
+        
+    
+    
+            var circle_29fbc87f0da4456c9429a3abad0cb5dc = L.circle(
+                [-16.0, 167.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_2a8313eb39dd46889b8fe426e10332ef = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f2ccd6b925234cdb9a98f294a2a127c5 = $(`<div id="html_f2ccd6b925234cdb9a98f294a2a127c5" style="width: 100.0%; height: 100.0%;">Vanuatu has the following animals: Large White, </div>`)[0];
+            popup_2a8313eb39dd46889b8fe426e10332ef.setContent(html_f2ccd6b925234cdb9a98f294a2a127c5);
+        
+
+        circle_29fbc87f0da4456c9429a3abad0cb5dc.bindPopup(popup_2a8313eb39dd46889b8fe426e10332ef)
+        ;
+
+        
+    
+    
+            var circle_924ef85151114f278e3310f151a8db51 = L.circle(
+                [-30.0, -71.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_c3746a704ae8422290970f06b10201ce = L.popup({"maxWidth": "100%"});
+
+        
+            var html_657480bb9d614f4090b9cee57154422e = $(`<div id="html_657480bb9d614f4090b9cee57154422e" style="width: 100.0%; height: 100.0%;">Chile has the following animals: Canadiense, Ganso cabeza colourada, Embden, Sebastopol, Tolouse, Large White, </div>`)[0];
+            popup_c3746a704ae8422290970f06b10201ce.setContent(html_657480bb9d614f4090b9cee57154422e);
+        
+
+        circle_924ef85151114f278e3310f151a8db51.bindPopup(popup_c3746a704ae8422290970f06b10201ce)
+        ;
+
+        
+    
+    
+            var circle_02d0de5327844b18bbf62bd0362bf4f3 = L.circle(
+                [6.46667, 2.6],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_4234ddcb3dd045f1ab6c07229285127c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8480bd4dd35a480488e0809d06a104e4 = $(`<div id="html_8480bd4dd35a480488e0809d06a104e4" style="width: 100.0%; height: 100.0%;">Benin has the following animals: Large White, </div>`)[0];
+            popup_4234ddcb3dd045f1ab6c07229285127c.setContent(html_8480bd4dd35a480488e0809d06a104e4);
+        
+
+        circle_02d0de5327844b18bbf62bd0362bf4f3.bindPopup(popup_4234ddcb3dd045f1ab6c07229285127c)
+        ;
+
+        
+    
+    
+            var circle_e5009e5d570f419d88f498ba6ed1f6f1 = L.circle(
+                [-10.0, -52.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_8240535107af4523ae805f0e45d92836 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8354c4e15ff64bb28771793d807e0d17 = $(`<div id="html_8354c4e15ff64bb28771793d807e0d17" style="width: 100.0%; height: 100.0%;">Brazil has the following animals: Large White, </div>`)[0];
+            popup_8240535107af4523ae805f0e45d92836.setContent(html_8354c4e15ff64bb28771793d807e0d17);
+        
+
+        circle_e5009e5d570f419d88f498ba6ed1f6f1.bindPopup(popup_8240535107af4523ae805f0e45d92836)
+        ;
+
+        
+    
+    
+            var circle_39f95d0b5b434352a0b2c537a638b56e = L.circle(
+                [13.0, -2.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_1431498a835a4bb3a6c7ed8330504852 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_878250f4d467437fb2f95a02b2c704c2 = $(`<div id="html_878250f4d467437fb2f95a02b2c704c2" style="width: 100.0%; height: 100.0%;">Burkina Faso has the following animals: Burkina Faso Domestic Goose, </div>`)[0];
+            popup_1431498a835a4bb3a6c7ed8330504852.setContent(html_878250f4d467437fb2f95a02b2c704c2);
+        
+
+        circle_39f95d0b5b434352a0b2c537a638b56e.bindPopup(popup_1431498a835a4bb3a6c7ed8330504852)
+        ;
+
+        
+    
+    
+            var circle_d9676c4b1d104e289cc65dc006a89c29 = L.circle(
+                [-20.0, 47.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_23587f2ad52a474e8d7a5464cd189bfe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d260c08a93304ec19f65b489a29e00f3 = $(`<div id="html_d260c08a93304ec19f65b489a29e00f3" style="width: 100.0%; height: 100.0%;">Madagascar has the following animals: Oie de Lande, Oie de Guinée, Large White, </div>`)[0];
+            popup_23587f2ad52a474e8d7a5464cd189bfe.setContent(html_d260c08a93304ec19f65b489a29e00f3);
+        
+
+        circle_d9676c4b1d104e289cc65dc006a89c29.bindPopup(popup_23587f2ad52a474e8d7a5464cd189bfe)
+        ;
+
+        
+    
+    
+            var circle_4533827fb91c460ea19f69fdfcb6353a = L.circle(
+                [15.0, -86.5],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_5cb67e28b6b347c697c320742c15ec03 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_85e23d542cbd48cdb6946196d40cf21b = $(`<div id="html_85e23d542cbd48cdb6946196d40cf21b" style="width: 100.0%; height: 100.0%;">Honduras has the following animals: Shetland, </div>`)[0];
+            popup_5cb67e28b6b347c697c320742c15ec03.setContent(html_85e23d542cbd48cdb6946196d40cf21b);
+        
+
+        circle_4533827fb91c460ea19f69fdfcb6353a.bindPopup(popup_5cb67e28b6b347c697c320742c15ec03)
+        ;
+
+        
+    
+    
+            var circle_4690cf7d34a8460bbd8b4157199a7717 = L.circle(
+                [41.0, 20.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_0e7d6a315a7a4e9aaa0800ba5a9b01af = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1e06423743484377a37d89ab7bd98aa5 = $(`<div id="html_1e06423743484377a37d89ab7bd98aa5" style="width: 100.0%; height: 100.0%;">Albania has the following animals: Large White, </div>`)[0];
+            popup_0e7d6a315a7a4e9aaa0800ba5a9b01af.setContent(html_1e06423743484377a37d89ab7bd98aa5);
+        
+
+        circle_4690cf7d34a8460bbd8b4157199a7717.bindPopup(popup_0e7d6a315a7a4e9aaa0800ba5a9b01af)
+        ;
+
+        
+    
+    
+            var circle_24acb5e481a94727b2b4f04c8e314266 = L.circle(
+                [26.0, 30.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_f34a2f97876c4993829c5c96fdeccfbf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ab0d34d4361941658cad5bb20032043c = $(`<div id="html_ab0d34d4361941658cad5bb20032043c" style="width: 100.0%; height: 100.0%;">Egypt has the following animals: Egyptian Goose, </div>`)[0];
+            popup_f34a2f97876c4993829c5c96fdeccfbf.setContent(html_ab0d34d4361941658cad5bb20032043c);
+        
+
+        circle_24acb5e481a94727b2b4f04c8e314266.bindPopup(popup_f34a2f97876c4993829c5c96fdeccfbf)
+        ;
+
+        
+    
+    
+            var circle_b58cef905e3049f7b93b4aa28d3144a3 = L.circle(
+                [51.0, 9.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_cedb04b34d854cea81fb4ca8927e0200 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4d23c4e30da942e9ab23f341323eeb29 = $(`<div id="html_4d23c4e30da942e9ab23f341323eeb29" style="width: 100.0%; height: 100.0%;">Germany has the following animals: Deutsche Legegänse, Leinegans, Fränkische Landgänse, Höckergänse, Bayerische Landgans, Emdener Gänse, Celler Gänse, Diepholzer Gans, Steinbacher Kampfgänse, Pilgrimgänse, Lockengänse, Afrikanische Höckergänse, Elsässer Gänse, Pommerngänse, Russische Gänse, Lippegänse, Emporda Gänse, Shetland, Westafrikanische Zwergziege, Tschechische Gänse, Toulouser Gänse, </div>`)[0];
+            popup_cedb04b34d854cea81fb4ca8927e0200.setContent(html_4d23c4e30da942e9ab23f341323eeb29);
+        
+
+        circle_b58cef905e3049f7b93b4aa28d3144a3.bindPopup(popup_cedb04b34d854cea81fb4ca8927e0200)
+        ;
+
+        
+    
+    
+            var circle_bce40644c54140e8adfa9eb0ea275f04 = L.circle(
+                [18.0, -77.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_ab06de42ec894f72b7389e45a420e5f6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3d6d70208ab54b4b8ed957c02392151c = $(`<div id="html_3d6d70208ab54b4b8ed957c02392151c" style="width: 100.0%; height: 100.0%;">Jamaica has the following animals: Large White, </div>`)[0];
+            popup_ab06de42ec894f72b7389e45a420e5f6.setContent(html_3d6d70208ab54b4b8ed957c02392151c);
+        
+
+        circle_bce40644c54140e8adfa9eb0ea275f04.bindPopup(popup_ab06de42ec894f72b7389e45a420e5f6)
+        ;
+
+        
+    
+    
+            var circle_d3efb2b11f81461186081565a4033d18 = L.circle(
+                [41.0, 69.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_958d27accf634d489f251bab3f5e7e6d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1e9c35e0b165418ca3e7e52c1ca0603c = $(`<div id="html_1e9c35e0b165418ca3e7e52c1ca0603c" style="width: 100.0%; height: 100.0%;">Uzbekistan has the following animals: Local, Large White, Grey, </div>`)[0];
+            popup_958d27accf634d489f251bab3f5e7e6d.setContent(html_1e9c35e0b165418ca3e7e52c1ca0603c);
+        
+
+        circle_d3efb2b11f81461186081565a4033d18.bindPopup(popup_958d27accf634d489f251bab3f5e7e6d)
+        ;
+
+        
+    
+    
+            var circle_98ac1a624cb74c8b99b39164df2e5336 = L.circle(
+                [43.0, 12.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_9e360948d6414de6b5b0056d9edfb2c3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0673935ca91e408a84eee5999fae596e = $(`<div id="html_0673935ca91e408a84eee5999fae596e" style="width: 100.0%; height: 100.0%;">Italy has the following animals: oca Padovana, Oca romagnola, </div>`)[0];
+            popup_9e360948d6414de6b5b0056d9edfb2c3.setContent(html_0673935ca91e408a84eee5999fae596e);
+        
+
+        circle_98ac1a624cb74c8b99b39164df2e5336.bindPopup(popup_9e360948d6414de6b5b0056d9edfb2c3)
+        ;
+
+        
+    
+    
+            var circle_be916fec017e45ed85accff8b26e1543 = L.circle(
+                [61.0, 8.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_e99b2bb1798e445d8465575277ccecd7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7599b78c9df241f88e918d95296bf63b = $(`<div id="html_7599b78c9df241f88e918d95296bf63b" style="width: 100.0%; height: 100.0%;">Norway has the following animals: Norsk hvit gas, Smaalensgas, </div>`)[0];
+            popup_e99b2bb1798e445d8465575277ccecd7.setContent(html_7599b78c9df241f88e918d95296bf63b);
+        
+
+        circle_be916fec017e45ed85accff8b26e1543.bindPopup(popup_e99b2bb1798e445d8465575277ccecd7)
+        ;
+
+        
+    
+    
+            var circle_31f863bc66ce4490971e049b630df5ea = L.circle(
+                [35.9, 14.5],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_7fe856dca81541018047d3fb153f4eec = L.popup({"maxWidth": "100%"});
+
+        
+            var html_546789d416804338b6ca502f57107b33 = $(`<div id="html_546789d416804338b6ca502f57107b33" style="width: 100.0%; height: 100.0%;">Malta has the following animals: Large White, </div>`)[0];
+            popup_7fe856dca81541018047d3fb153f4eec.setContent(html_546789d416804338b6ca502f57107b33);
+        
+
+        circle_31f863bc66ce4490971e049b630df5ea.bindPopup(popup_7fe856dca81541018047d3fb153f4eec)
+        ;
+
+        
+    
+    
+            var circle_da804fc00be94147b02f5c4e3cea9e11 = L.circle(
+                [50.85, 4.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_41db44b072744048ad6fe3053ad3fe1a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_52543918fde347a5880053c68f9dede5 = $(`<div id="html_52543918fde347a5880053c68f9dede5" style="width: 100.0%; height: 100.0%;">Belgium has the following animals: Vlaamse gans, Large White, </div>`)[0];
+            popup_41db44b072744048ad6fe3053ad3fe1a.setContent(html_52543918fde347a5880053c68f9dede5);
+        
+
+        circle_da804fc00be94147b02f5c4e3cea9e11.bindPopup(popup_41db44b072744048ad6fe3053ad3fe1a)
+        ;
+
+        
+    
+    
+            var circle_64a0b2cad78849dd9169b3dbfe730806 = L.circle(
+                [-13.5833, -171.75],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_ea1bc5e7991347058c9c641c6da5d80a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fbd261b468834d46afed1bbd3edd9cab = $(`<div id="html_fbd261b468834d46afed1bbd3edd9cab" style="width: 100.0%; height: 100.0%;">Samoa has the following animals: Large White, </div>`)[0];
+            popup_ea1bc5e7991347058c9c641c6da5d80a.setContent(html_fbd261b468834d46afed1bbd3edd9cab);
+        
+
+        circle_64a0b2cad78849dd9169b3dbfe730806.bindPopup(popup_ea1bc5e7991347058c9c641c6da5d80a)
+        ;
+
+        
+    
+    
+            var circle_c8082541deb04bb9a45fcef2b8ee6fb4 = L.circle(
+                [22.0, 96.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_8dfb0877acf940e796d7239433399c38 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_674c6e101c304b0c9f72118963ac1bff = $(`<div id="html_674c6e101c304b0c9f72118963ac1bff" style="width: 100.0%; height: 100.0%;">Myanmar has the following animals: Large White, </div>`)[0];
+            popup_8dfb0877acf940e796d7239433399c38.setContent(html_674c6e101c304b0c9f72118963ac1bff);
+        
+
+        circle_c8082541deb04bb9a45fcef2b8ee6fb4.bindPopup(popup_8dfb0877acf940e796d7239433399c38)
+        ;
+
+        
+    
+    
+            var circle_1c116cc49d7349959a17f5c5a5ba253b = L.circle(
+                [6.0, 12.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_41c2ebe996484915b5c8c8462a639df9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9c60fcc55b0240849e33d32658d8b33e = $(`<div id="html_9c60fcc55b0240849e33d32658d8b33e" style="width: 100.0%; height: 100.0%;">Cameroon has the following animals: Oies du Cameroun, </div>`)[0];
+            popup_41c2ebe996484915b5c8c8462a639df9.setContent(html_9c60fcc55b0240849e33d32658d8b33e);
+        
+
+        circle_1c116cc49d7349959a17f5c5a5ba253b.bindPopup(popup_41c2ebe996484915b5c8c8462a639df9)
+        ;
+
+        
+    
+    
+            var circle_6b26677d45114d6d9b688a460c39a90e = L.circle(
+                [48.15, 19.5],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_4f529d23320b445bbd73597dc0e2df26 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1219ef4b2424426e926f6f65f4bf685e = $(`<div id="html_1219ef4b2424426e926f6f65f4bf685e" style="width: 100.0%; height: 100.0%;">Slovakia has the following animals: Suchovy, Slovenská biela, Landeská, Pomoranská, </div>`)[0];
+            popup_4f529d23320b445bbd73597dc0e2df26.setContent(html_1219ef4b2424426e926f6f65f4bf685e);
+        
+
+        circle_6b26677d45114d6d9b688a460c39a90e.bindPopup(popup_4f529d23320b445bbd73597dc0e2df26)
+        ;
+
+        
+    
+    
+            var circle_1f18563cf70a4b7c8a8a7fe43f18f6ea = L.circle(
+                [14.0, -14.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_f13623dede7d49f39c15f63a5061768b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0d9329dc3e8c483b921c35938b006aa0 = $(`<div id="html_0d9329dc3e8c483b921c35938b006aa0" style="width: 100.0%; height: 100.0%;">Senegal has the following animals: Large White, </div>`)[0];
+            popup_f13623dede7d49f39c15f63a5061768b.setContent(html_0d9329dc3e8c483b921c35938b006aa0);
+        
+
+        circle_1f18563cf70a4b7c8a8a7fe43f18f6ea.bindPopup(popup_f13623dede7d49f39c15f63a5061768b)
+        ;
+
+        
+    
+    
+            var circle_b278dabbc81e4d16975c9996b900e784 = L.circle(
+                [-22.0, 17.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_c07441293ece4f86bd2a7054985845c0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f6db4f0f0cdc4d319388c6ddfdd75e79 = $(`<div id="html_f6db4f0f0cdc4d319388c6ddfdd75e79" style="width: 100.0%; height: 100.0%;">Namibia has the following animals: Large White, </div>`)[0];
+            popup_c07441293ece4f86bd2a7054985845c0.setContent(html_f6db4f0f0cdc4d319388c6ddfdd75e79);
+        
+
+        circle_b278dabbc81e4d16975c9996b900e784.bindPopup(popup_c07441293ece4f86bd2a7054985845c0)
+        ;
+
+        
+    
+    
+            var circle_4b94165fef5149369a5d83e41a76f61d = L.circle(
+                [-20.2, 57.5],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_68b628fe8bb54a8983756dfdaa3a853a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eda9d7ded7c34c1e9eca681714b5b712 = $(`<div id="html_eda9d7ded7c34c1e9eca681714b5b712" style="width: 100.0%; height: 100.0%;">Mauritius has the following animals: Large White, </div>`)[0];
+            popup_68b628fe8bb54a8983756dfdaa3a853a.setContent(html_eda9d7ded7c34c1e9eca681714b5b712);
+        
+
+        circle_4b94165fef5149369a5d83e41a76f61d.bindPopup(popup_68b628fe8bb54a8983756dfdaa3a853a)
+        ;
+
+        
+    
+    
+            var circle_2231e283186c49a4978a96dffc0e2fe1 = L.circle(
+                [64.0, 26.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_c3da9e84de654e9f86d57484ae699289 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c384a6b03f7d4ee3842113187f776835 = $(`<div id="html_c384a6b03f7d4ee3842113187f776835" style="width: 100.0%; height: 100.0%;">Finland has the following animals: Large White, Valkea Italialainen, </div>`)[0];
+            popup_c3da9e84de654e9f86d57484ae699289.setContent(html_c384a6b03f7d4ee3842113187f776835);
+        
+
+        circle_2231e283186c49a4978a96dffc0e2fe1.bindPopup(popup_c3da9e84de654e9f86d57484ae699289)
+        ;
+
+        
+    
+    
+            var circle_dc9bb8d0bd844bf992cffd6389ffe07c = L.circle(
+                [17.3, -62.75],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_50994d5a1e4c47149891c7f00c267ee3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a1292fafef034ed0b18f21a68d4c1be1 = $(`<div id="html_a1292fafef034ed0b18f21a68d4c1be1" style="width: 100.0%; height: 100.0%;">Saint Kitts and Nevis has the following animals: Goose, Large White, </div>`)[0];
+            popup_50994d5a1e4c47149891c7f00c267ee3.setContent(html_a1292fafef034ed0b18f21a68d4c1be1);
+        
+
+        circle_dc9bb8d0bd844bf992cffd6389ffe07c.bindPopup(popup_50994d5a1e4c47149891c7f00c267ee3)
+        ;
+
+        
+    
+    
+            var circle_a9c1b4cb0b354109a42e27c09722f937 = L.circle(
+                [7.5, 134.5],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_9c420b6298b8477f84a0141366005efa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5a0c0742c31d4422839e99dbe6306739 = $(`<div id="html_5a0c0742c31d4422839e99dbe6306739" style="width: 100.0%; height: 100.0%;">Palau has the following animals: Large White, </div>`)[0];
+            popup_9c420b6298b8477f84a0141366005efa.setContent(html_5a0c0742c31d4422839e99dbe6306739);
+        
+
+        circle_a9c1b4cb0b354109a42e27c09722f937.bindPopup(popup_9c420b6298b8477f84a0141366005efa)
+        ;
+
+        
+    
+    
+            var circle_10ed1909c4694c708b7df8fe2f4156df = L.circle(
+                [7.0, 81.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_6fcf14248a28400486915b9769a3a173 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c503128c319646329669166f3878b7dc = $(`<div id="html_c503128c319646329669166f3878b7dc" style="width: 100.0%; height: 100.0%;">Sri Lanka has the following animals: Large White, </div>`)[0];
+            popup_6fcf14248a28400486915b9769a3a173.setContent(html_c503128c319646329669166f3878b7dc);
+        
+
+        circle_10ed1909c4694c708b7df8fe2f4156df.bindPopup(popup_6fcf14248a28400486915b9769a3a173)
+        ;
+
+        
+    
+    
+            var circle_20090decc604405ca10629a3e878f21c = L.circle(
+                [7.0, 21.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_64ce816d999840c793fb1afc7c0c70f5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_044d490d61fc40c094e37302e66e9382 = $(`<div id="html_044d490d61fc40c094e37302e66e9382" style="width: 100.0%; height: 100.0%;">Central African Republic has the following animals: Large White, </div>`)[0];
+            popup_64ce816d999840c793fb1afc7c0c70f5.setContent(html_044d490d61fc40c094e37302e66e9382);
+        
+
+        circle_20090decc604405ca10629a3e878f21c.bindPopup(popup_64ce816d999840c793fb1afc7c0c70f5)
+        ;
+
+        
+    
+    
+            var circle_f5d2d89d817d4fb6bd4b106baa3ffb86 = L.circle(
+                [-33.0, -56.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_c2e9b96de03540ddb757059ab55fe544 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a1cb7a39524b4ffeac664a4e65b59df6 = $(`<div id="html_a1cb7a39524b4ffeac664a4e65b59df6" style="width: 100.0%; height: 100.0%;">Uruguay has the following animals: Large White, </div>`)[0];
+            popup_c2e9b96de03540ddb757059ab55fe544.setContent(html_a1cb7a39524b4ffeac664a4e65b59df6);
+        
+
+        circle_f5d2d89d817d4fb6bd4b106baa3ffb86.bindPopup(popup_c2e9b96de03540ddb757059ab55fe544)
+        ;
+
+        
+    
+    
+            var circle_159721ae27174cb28b29b39fe61a6cc7 = L.circle(
+                [55.0, -3.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_cceaaa935c434b56b5f4ec0b1431f1b9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0e00ab5a866a4848ae097bcdb5b1c7b4 = $(`<div id="html_0e00ab5a866a4848ae097bcdb5b1c7b4" style="width: 100.0%; height: 100.0%;">United Kingdom has the following animals: Pomeranian, Crested, West of England, Sebastopol (curly), Pilgrim, American Buff, Brecon Buff, Embden, Czechoslovakian, Steinbacher, African, Greyback, Toulouse, Diepholzer, Roman, Sebastopol (smooth), Large White, Chinese, Shetland, Faroese, Elsasser, Celler, </div>`)[0];
+            popup_cceaaa935c434b56b5f4ec0b1431f1b9.setContent(html_0e00ab5a866a4848ae097bcdb5b1c7b4);
+        
+
+        circle_159721ae27174cb28b29b39fe61a6cc7.bindPopup(popup_cceaaa935c434b56b5f4ec0b1431f1b9)
+        ;
+
+        
+    
+    
+            var circle_b0ae573362984f699c770de837da24ee = L.circle(
+                [8.48445, -13.2345],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_d4ccec32454a4bbda8f7e92bfd42e9ea = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6bf7743c81e24fd88257bbf290a65f62 = $(`<div id="html_6bf7743c81e24fd88257bbf290a65f62" style="width: 100.0%; height: 100.0%;">Sierra Leone has the following animals: Large White, </div>`)[0];
+            popup_d4ccec32454a4bbda8f7e92bfd42e9ea.setContent(html_6bf7743c81e24fd88257bbf290a65f62);
+        
+
+        circle_b0ae573362984f699c770de837da24ee.bindPopup(popup_d4ccec32454a4bbda8f7e92bfd42e9ea)
+        ;
+
+        
+    
+    
+            var circle_824f0e0ce90e4d51bec9d2f9ff5a9a3b = L.circle(
+                [8.48445, -11.5],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_94c6591929744f80984c1c725e4cfc1f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6c7f17c7761d45e385a920e1575f9a1e = $(`<div id="html_6c7f17c7761d45e385a920e1575f9a1e" style="width: 100.0%; height: 100.0%;">Sierra Leone has the following animals: Large White, </div>`)[0];
+            popup_94c6591929744f80984c1c725e4cfc1f.setContent(html_6c7f17c7761d45e385a920e1575f9a1e);
+        
+
+        circle_824f0e0ce90e4d51bec9d2f9ff5a9a3b.bindPopup(popup_94c6591929744f80984c1c725e4cfc1f)
+        ;
+
+        
+    
+    
+            var circle_77ad7918513f40408a6747dd4e00317f = L.circle(
+                [8.5, -13.2345],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_6b94c82837ff458390878b0ef49b3fc3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d498cbfbdcc2458c84cf90a1e64cfd50 = $(`<div id="html_d498cbfbdcc2458c84cf90a1e64cfd50" style="width: 100.0%; height: 100.0%;">Sierra Leone has the following animals: Large White, </div>`)[0];
+            popup_6b94c82837ff458390878b0ef49b3fc3.setContent(html_d498cbfbdcc2458c84cf90a1e64cfd50);
+        
+
+        circle_77ad7918513f40408a6747dd4e00317f.bindPopup(popup_6b94c82837ff458390878b0ef49b3fc3)
+        ;
+
+        
+    
+    
+            var circle_58c409b4b67546b18b805403f962e1ca = L.circle(
+                [8.5, -11.5],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_ca7fdf840fea41cebf855e35a19c17a0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9fc79d1026cd4fd4861bcb0f4fe0d519 = $(`<div id="html_9fc79d1026cd4fd4861bcb0f4fe0d519" style="width: 100.0%; height: 100.0%;">Sierra Leone has the following animals: Large White, </div>`)[0];
+            popup_ca7fdf840fea41cebf855e35a19c17a0.setContent(html_9fc79d1026cd4fd4861bcb0f4fe0d519);
+        
+
+        circle_58c409b4b67546b18b805403f962e1ca.bindPopup(popup_ca7fdf840fea41cebf855e35a19c17a0)
+        ;
+
+        
+    
+    
+            var circle_790f48b21c8e42db8318016ee3d9861d = L.circle(
+                [13.0, 122.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_cb92c5e860134ee38e3ff7e943ad668e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d3e3201fecb843f0b2aef861021a2fcb = $(`<div id="html_d3e3201fecb843f0b2aef861021a2fcb" style="width: 100.0%; height: 100.0%;">Philippines has the following animals: Philippine Domestic Goose, Large White, </div>`)[0];
+            popup_cb92c5e860134ee38e3ff7e943ad668e.setContent(html_d3e3201fecb843f0b2aef861021a2fcb);
+        
+
+        circle_790f48b21c8e42db8318016ee3d9861d.bindPopup(popup_cb92c5e860134ee38e3ff7e943ad668e)
+        ;
+
+        
+    
+    
+            var circle_86a32b8f90af40d2be14f1d8e9ada864 = L.circle(
+                [-12.5, 18.5],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_08554368d9bd4590be77842b37afe607 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1f169099165b4d00baf72a30d3f504fa = $(`<div id="html_1f169099165b4d00baf72a30d3f504fa" style="width: 100.0%; height: 100.0%;">Angola has the following animals: Large White, </div>`)[0];
+            popup_08554368d9bd4590be77842b37afe607.setContent(html_1f169099165b4d00baf72a30d3f504fa);
+        
+
+        circle_86a32b8f90af40d2be14f1d8e9ada864.bindPopup(popup_08554368d9bd4590be77842b37afe607)
+        ;
+
+        
+    
+    
+            var circle_673cebe240eb4d65b8970b83764a0a53 = L.circle(
+                [13.1, -59.55],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_5edcbaa264a1494abf6898b1c17ad337 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_848173ad0e194b6d88e0ae0d5df5d471 = $(`<div id="html_848173ad0e194b6d88e0ae0d5df5d471" style="width: 100.0%; height: 100.0%;">Barbados has the following animals: Large White, </div>`)[0];
+            popup_5edcbaa264a1494abf6898b1c17ad337.setContent(html_848173ad0e194b6d88e0ae0d5df5d471);
+        
+
+        circle_673cebe240eb4d65b8970b83764a0a53.bindPopup(popup_5edcbaa264a1494abf6898b1c17ad337)
+        ;
+
+        
+    
+    
+            var circle_0e6bc266dbf04b8381a11e72eacb976b = L.circle(
+                [46.95, 7.45],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_c05479770377418b832f6cf57132ded6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d01b71c749e340988dea07818c7f1d3b = $(`<div id="html_d01b71c749e340988dea07818c7f1d3b" style="width: 100.0%; height: 100.0%;">Switzerland has the following animals: Diepholzer, </div>`)[0];
+            popup_c05479770377418b832f6cf57132ded6.setContent(html_d01b71c749e340988dea07818c7f1d3b);
+        
+
+        circle_0e6bc266dbf04b8381a11e72eacb976b.bindPopup(popup_c05479770377418b832f6cf57132ded6)
+        ;
+
+        
+    
+    
+            var circle_11a0019a27a44593ad469215c608543e = L.circle(
+                [-6.0, 147.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_afb33e3e12a548e58f0e9c993b1857ba = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c332fd88a8b240389dd27a12ad369002 = $(`<div id="html_c332fd88a8b240389dd27a12ad369002" style="width: 100.0%; height: 100.0%;">Papua New Guinea has the following animals: Large White, </div>`)[0];
+            popup_afb33e3e12a548e58f0e9c993b1857ba.setContent(html_c332fd88a8b240389dd27a12ad369002);
+        
+
+        circle_11a0019a27a44593ad469215c608543e.bindPopup(popup_afb33e3e12a548e58f0e9c993b1857ba)
+        ;
+
+        
+    
+    
+            var circle_a90b63fd26e04ff3be39087b49c19d1d = L.circle(
+                [-21.2, -159.767],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_d90328e4b9f14855bcd6307435ba1cb8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5805a41776a64c5196af44a23cba9c35 = $(`<div id="html_5805a41776a64c5196af44a23cba9c35" style="width: 100.0%; height: 100.0%;">Cook Islands has the following animals: Large White, </div>`)[0];
+            popup_d90328e4b9f14855bcd6307435ba1cb8.setContent(html_5805a41776a64c5196af44a23cba9c35);
+        
+
+        circle_a90b63fd26e04ff3be39087b49c19d1d.bindPopup(popup_d90328e4b9f14855bcd6307435ba1cb8)
+        ;
+
+        
+    
+    
+            var circle_451d4f81649947b1bbbe7e8e21ddd0b2 = L.circle(
+                [-23.0, -58.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_88a2aad122a8450d9e5f218754b61e46 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_14091282910a4814806f56b4d13432d9 = $(`<div id="html_14091282910a4814806f56b4d13432d9" style="width: 100.0%; height: 100.0%;">Paraguay has the following animals: Large White, </div>`)[0];
+            popup_88a2aad122a8450d9e5f218754b61e46.setContent(html_14091282910a4814806f56b4d13432d9);
+        
+
+        circle_451d4f81649947b1bbbe7e8e21ddd0b2.bindPopup(popup_88a2aad122a8450d9e5f218754b61e46)
+        ;
+
+        
+    
+    
+            var circle_f9070ee94ce74e548303acd0dea47f1a = L.circle(
+                [44.0, 21.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_14075745825346d0b9765a472bfa8a3a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9222fbbce562467b952f33a84674d49e = $(`<div id="html_9222fbbce562467b952f33a84674d49e" style="width: 100.0%; height: 100.0%;">Serbia has the following animals: Domaća guska, Italian, Large White, </div>`)[0];
+            popup_14075745825346d0b9765a472bfa8a3a.setContent(html_9222fbbce562467b952f33a84674d49e);
+        
+
+        circle_f9070ee94ce74e548303acd0dea47f1a.bindPopup(popup_14075745825346d0b9765a472bfa8a3a)
+        ;
+
+        
+    
+    
+            var circle_b8f475b05bad46a4b5d2221110d287c5 = L.circle(
+                [-20.0, -175.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_14959a302e29498d983ed7e35f74153c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_25f2aaf995de4682a9a715d2a31074e1 = $(`<div id="html_25f2aaf995de4682a9a715d2a31074e1" style="width: 100.0%; height: 100.0%;">Tonga has the following animals: Large White, </div>`)[0];
+            popup_14959a302e29498d983ed7e35f74153c.setContent(html_25f2aaf995de4682a9a715d2a31074e1);
+        
+
+        circle_b8f475b05bad46a4b5d2221110d287c5.bindPopup(popup_14959a302e29498d983ed7e35f74153c)
+        ;
+
+        
+    
+    
+            var circle_8e00a2b2dcff480cbfd161224eebf350 = L.circle(
+                [56.0, 10.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_da06ab47237c48d6a2ced4b400003e79 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2fa641d0197247649d4552ef816816ea = $(`<div id="html_2fa641d0197247649d4552ef816816ea" style="width: 100.0%; height: 100.0%;">Denmark has the following animals: Grå og Gråbrogede Danske Gæs, </div>`)[0];
+            popup_da06ab47237c48d6a2ced4b400003e79.setContent(html_2fa641d0197247649d4552ef816816ea);
+        
+
+        circle_8e00a2b2dcff480cbfd161224eebf350.bindPopup(popup_da06ab47237c48d6a2ced4b400003e79)
+        ;
+
+        
+    
+    
+            var circle_2330d937951648e0a456c77148761c20 = L.circle(
+                [17.0, -8.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_0068cac653584afdaf29a98f49f3a589 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1cfbc7dc288b4df4a04ac482438ddd79 = $(`<div id="html_1cfbc7dc288b4df4a04ac482438ddd79" style="width: 100.0%; height: 100.0%;">Mali has the following animals: Large White, </div>`)[0];
+            popup_0068cac653584afdaf29a98f49f3a589.setContent(html_1cfbc7dc288b4df4a04ac482438ddd79);
+        
+
+        circle_2330d937951648e0a456c77148761c20.bindPopup(popup_0068cac653584afdaf29a98f49f3a589)
+        ;
+
+        
+    
+    
+            var circle_0fcd27d24ea541c7b8da867e86c2f0ba = L.circle(
+                [1.41667, 173.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_31f64fec982d46bab34ff8debd2a41ae = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6e702cca0470494e836603428af7fec6 = $(`<div id="html_6e702cca0470494e836603428af7fec6" style="width: 100.0%; height: 100.0%;">Kiribati has the following animals: Large White, </div>`)[0];
+            popup_31f64fec982d46bab34ff8debd2a41ae.setContent(html_6e702cca0470494e836603428af7fec6);
+        
+
+        circle_0fcd27d24ea541c7b8da867e86c2f0ba.bindPopup(popup_31f64fec982d46bab34ff8debd2a41ae)
+        ;
+
+        
+    
+    
+            var circle_bdeb6a98c6b84722b10820b195fe9c75 = L.circle(
+                [13.8333, -88.9167],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_d2589b2fd5d5404abe0432da9ee24e19 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aa6da023fcc54c5195355ee0821e7a76 = $(`<div id="html_aa6da023fcc54c5195355ee0821e7a76" style="width: 100.0%; height: 100.0%;">El Salvador has the following animals: Salvadorean Duck, </div>`)[0];
+            popup_d2589b2fd5d5404abe0432da9ee24e19.setContent(html_aa6da023fcc54c5195355ee0821e7a76);
+        
+
+        circle_bdeb6a98c6b84722b10820b195fe9c75.bindPopup(popup_d2589b2fd5d5404abe0432da9ee24e19)
+        ;
+
+        
+    
+    
+            var circle_de4d4c8e50fd4ae1a45c7f001d906de9 = L.circle(
+                [52.0, 20.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_e3476277bfa94efaa819de144eb20816 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_015b3d0e5e52469c85b58b8bba50b298 = $(`<div id="html_015b3d0e5e52469c85b58b8bba50b298" style="width: 100.0%; height: 100.0%;">Poland has the following animals: Podkarpacka, Biala Koludzka, Słowacka, Pomorska, Garbonosa, Romańska, Rypińska, Landes, WD-02, Lubelska, Kubańska, Gorkowska, Kartuska, Kielecka, ND-12, Biala Koludzka W33, Biłgorajska, Suwalska, Zatorska ZD-1, </div>`)[0];
+            popup_e3476277bfa94efaa819de144eb20816.setContent(html_015b3d0e5e52469c85b58b8bba50b298);
+        
+
+        circle_de4d4c8e50fd4ae1a45c7f001d906de9.bindPopup(popup_e3476277bfa94efaa819de144eb20816)
+        ;
+
+        
+    
+    
+            var circle_9d3872a30cde4aec9f1c91756fccee9d = L.circle(
+                [-8.0, 178.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_5cebe1af79bf4054aafac62696d8b87b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e4c4a0c4cdfb446eb25db4b7e3db3f4d = $(`<div id="html_e4c4a0c4cdfb446eb25db4b7e3db3f4d" style="width: 100.0%; height: 100.0%;">Tuvalu has the following animals: Large White, </div>`)[0];
+            popup_5cebe1af79bf4054aafac62696d8b87b.setContent(html_e4c4a0c4cdfb446eb25db4b7e3db3f4d);
+        
+
+        circle_9d3872a30cde4aec9f1c91756fccee9d.bindPopup(popup_5cebe1af79bf4054aafac62696d8b87b)
+        ;
+
+        
+    
+    
+            var circle_b8d7dace6ce24cf09434eb561e3ea03d = L.circle(
+                [46.05, 14.5],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_3d467294182943ddaa1e22d3e0f16ddf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f368b361abc6418c91df7c3d292ae54f = $(`<div id="html_f368b361abc6418c91df7c3d292ae54f" style="width: 100.0%; height: 100.0%;">Slovenia has the following animals: siva gos, kodrava gos, emdenska gos, slovaška gos, labodja gos, tuluška gos, pomeranska gos, </div>`)[0];
+            popup_3d467294182943ddaa1e22d3e0f16ddf.setContent(html_f368b361abc6418c91df7c3d292ae54f);
+        
+
+        circle_b8d7dace6ce24cf09434eb561e3ea03d.bindPopup(popup_3d467294182943ddaa1e22d3e0f16ddf)
+        ;
+
+        
+    
+    
+            var circle_725a05a8e05f4b3cb234f67a1148f138 = L.circle(
+                [49.0, 30.5],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_d72acd1cf61e4cfa817da33da2514f97 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0fd5967fb62d4ebd8757189761a17328 = $(`<div id="html_0fd5967fb62d4ebd8757189761a17328" style="width: 100.0%; height: 100.0%;">Ukraine has the following animals: Large Grey, Obroshyno White, Italian White, Pereyaslavsky, Romensky, Gorkivsky, African, Toulouse, Kubanian Grey, Lindovska, Koloosh white, Cross Mammoth, Leghart, Large White, Obrishino Grey, Rhenish White, Kholmogorsky, Synthetic Ukrainian Population, </div>`)[0];
+            popup_d72acd1cf61e4cfa817da33da2514f97.setContent(html_0fd5967fb62d4ebd8757189761a17328);
+        
+
+        circle_725a05a8e05f4b3cb234f67a1148f138.bindPopup(popup_d72acd1cf61e4cfa817da33da2514f97)
+        ;
+
+        
+    
+    
+            var circle_c2f6ce60bb464d3ca688f9e4df3b1c4f = L.circle(
+                [15.0, 19.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_be80c9f13d65491e8785871d85e3f6a6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b4a419e7a1d44cfa851cd3412ccb8035 = $(`<div id="html_b4a419e7a1d44cfa851cd3412ccb8035" style="width: 100.0%; height: 100.0%;">Chad has the following animals: Local Goose of Mandelia, Local Goose of Karal and Massakory, </div>`)[0];
+            popup_be80c9f13d65491e8785871d85e3f6a6.setContent(html_b4a419e7a1d44cfa851cd3412ccb8035);
+        
+
+        circle_c2f6ce60bb464d3ca688f9e4df3b1c4f.bindPopup(popup_be80c9f13d65491e8785871d85e3f6a6)
+        ;
+
+        
+    
+    
+            var circle_886264899a5b43b491c8829456d1119f = L.circle(
+                [40.3, 47.7],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_0cb6473da29742fd841881ce540d5a2c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f4c64511d9d14f2fa77900d55928df66 = $(`<div id="html_f4c64511d9d14f2fa77900d55928df66" style="width: 100.0%; height: 100.0%;">Azerbaijan has the following animals: Local, Aboriginal breed, </div>`)[0];
+            popup_0cb6473da29742fd841881ce540d5a2c.setContent(html_f4c64511d9d14f2fa77900d55928df66);
+        
+
+        circle_886264899a5b43b491c8829456d1119f.bindPopup(popup_0cb6473da29742fd841881ce540d5a2c)
+        ;
+
+        
+    
+    
+            var circle_9d27863ce09a4952aa5ab5aec74c5a0e = L.circle(
+                [-1.94388, 30.0595],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_c5279a42c86343d987c3cac7e2950e08 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_354b9b7f61984282a7bca996a1feb7de = $(`<div id="html_354b9b7f61984282a7bca996a1feb7de" style="width: 100.0%; height: 100.0%;">Rwanda has the following animals: Large White, </div>`)[0];
+            popup_c5279a42c86343d987c3cac7e2950e08.setContent(html_354b9b7f61984282a7bca996a1feb7de);
+        
+
+        circle_9d27863ce09a4952aa5ab5aec74c5a0e.bindPopup(popup_c5279a42c86343d987c3cac7e2950e08)
+        ;
+
+        
+    
+    
+            var circle_43bf187ec9e7446899c2843daa057193 = L.circle(
+                [39.0, 71.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_ff77947be3fa4daab2ffbebfd4ed4987 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_72182193bc644019a18ae8ae9e00a0b5 = $(`<div id="html_72182193bc644019a18ae8ae9e00a0b5" style="width: 100.0%; height: 100.0%;">Tajikistan has the following animals: Local, </div>`)[0];
+            popup_ff77947be3fa4daab2ffbebfd4ed4987.setContent(html_72182193bc644019a18ae8ae9e00a0b5);
+        
+
+        circle_43bf187ec9e7446899c2843daa057193.bindPopup(popup_ff77947be3fa4daab2ffbebfd4ed4987)
+        ;
+
+        
+    
+    
+            var circle_8b451d81e6de40908160389b4d65be4c = L.circle(
+                [23.7, 90.3],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_f701ccc50aa546d9a89de32e7cf15e22 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_651b52838cad4f7fb2a2ef90b9e812bf = $(`<div id="html_651b52838cad4f7fb2a2ef90b9e812bf" style="width: 100.0%; height: 100.0%;">Bangladesh has the following animals: White, Grey, </div>`)[0];
+            popup_f701ccc50aa546d9a89de32e7cf15e22.setContent(html_651b52838cad4f7fb2a2ef90b9e812bf);
+        
+
+        circle_8b451d81e6de40908160389b4d65be4c.bindPopup(popup_f701ccc50aa546d9a89de32e7cf15e22)
+        ;
+
+        
+    
+    
+            var circle_bc3d69268a284e8f91a17a1abe6891c7 = L.circle(
+                [-29.4667, 28.3],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_9e5706e6ed9e4df79bd080e02a01042e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_09b2d6e3d3154127a3ade1e5b79ac811 = $(`<div id="html_09b2d6e3d3154127a3ade1e5b79ac811" style="width: 100.0%; height: 100.0%;">Lesotho has the following animals: Large White, </div>`)[0];
+            popup_9e5706e6ed9e4df79bd080e02a01042e.setContent(html_09b2d6e3d3154127a3ade1e5b79ac811);
+        
+
+        circle_bc3d69268a284e8f91a17a1abe6891c7.bindPopup(popup_9e5706e6ed9e4df79bd080e02a01042e)
+        ;
+
+        
+    
+    
+            var circle_68e999a3a22643ce80c82df76c512bc2 = L.circle(
+                [55.0, 24.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_617a9ef89e344e53a9dd2470310db3d8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1830040f12764791b97d0467b4a1f27a = $(`<div id="html_1830040f12764791b97d0467b4a1f27a" style="width: 100.0%; height: 100.0%;">Lithuania has the following animals: Italian White, Vishtines, Rein Meat, Chinese, Grey Big, </div>`)[0];
+            popup_617a9ef89e344e53a9dd2470310db3d8.setContent(html_1830040f12764791b97d0467b4a1f27a);
+        
+
+        circle_68e999a3a22643ce80c82df76c512bc2.bindPopup(popup_617a9ef89e344e53a9dd2470310db3d8)
+        ;
+
+        
+    
+    
+            var circle_1784f940aef44ae6b8140a47bc72437f = L.circle(
+                [-13.5, 34.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_afd45e8643724d2fb52575a9d50d46b7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_903f737b7c074abe9fd62425e51b0568 = $(`<div id="html_903f737b7c074abe9fd62425e51b0568" style="width: 100.0%; height: 100.0%;">Malawi has the following animals: Large White, </div>`)[0];
+            popup_afd45e8643724d2fb52575a9d50d46b7.setContent(html_903f737b7c074abe9fd62425e51b0568);
+        
+
+        circle_1784f940aef44ae6b8140a47bc72437f.bindPopup(popup_afd45e8643724d2fb52575a9d50d46b7)
+        ;
+
+        
+    
+    
+            var circle_7d8c42a8e7334c7485685c1caa2cb380 = L.circle(
+                [9.0, -80.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_1aa4c14cffe74a639cb4616d23ef1c49 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c1e91440948e4f7dbfc2241e2e32b564 = $(`<div id="html_c1e91440948e4f7dbfc2241e2e32b564" style="width: 100.0%; height: 100.0%;">Panama has the following animals: Large White, </div>`)[0];
+            popup_1aa4c14cffe74a639cb4616d23ef1c49.setContent(html_c1e91440948e4f7dbfc2241e2e32b564);
+        
+
+        circle_7d8c42a8e7334c7485685c1caa2cb380.bindPopup(popup_1aa4c14cffe74a639cb4616d23ef1c49)
+        ;
+
+        
+    
+    
+            var circle_dc4680dcf2184cd18eba1ba398fb6b0e = L.circle(
+                [12.0, -15.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_690509fe05d043d9ade25a5b40d572ee = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6b653954aa45433cbd2f44be0744cb38 = $(`<div id="html_6b653954aa45433cbd2f44be0744cb38" style="width: 100.0%; height: 100.0%;">Guinea-Bissau has the following animals: Large White, </div>`)[0];
+            popup_690509fe05d043d9ade25a5b40d572ee.setContent(html_6b653954aa45433cbd2f44be0744cb38);
+        
+
+        circle_dc4680dcf2184cd18eba1ba398fb6b0e.bindPopup(popup_690509fe05d043d9ade25a5b40d572ee)
+        ;
+
+        
+    
+    
+            var circle_ee52fb0ae45041c9acacaba4043b4e28 = L.circle(
+                [42.0, 43.5],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_c4e3d78e64044f008373872d3b085cb4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2d498b9e2e1e47ff846132a5f7d09936 = $(`<div id="html_2d498b9e2e1e47ff846132a5f7d09936" style="width: 100.0%; height: 100.0%;">Georgia has the following animals: Javakhuri goose, </div>`)[0];
+            popup_c4e3d78e64044f008373872d3b085cb4.setContent(html_2d498b9e2e1e47ff846132a5f7d09936);
+        
+
+        circle_ee52fb0ae45041c9acacaba4043b4e28.bindPopup(popup_c4e3d78e64044f008373872d3b085cb4)
+        ;
+
+        
+    
+    
+            var circle_169a51c6b4b544babfd1a78ad3947e5f = L.circle(
+                [52.3167, 5.55],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_8d1896d4dd4249689757c90704588a28 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_76631f5766be4f769dea697ef8336a04 = $(`<div id="html_76631f5766be4f769dea697ef8336a04" style="width: 100.0%; height: 100.0%;">Netherlands has the following animals: Twentse landgans, Shetland, </div>`)[0];
+            popup_8d1896d4dd4249689757c90704588a28.setContent(html_76631f5766be4f769dea697ef8336a04);
+        
+
+        circle_169a51c6b4b544babfd1a78ad3947e5f.bindPopup(popup_8d1896d4dd4249689757c90704588a28)
+        ;
+
+        
+    
+    
+            var circle_4e008c345f4649f28ef0f03459b93f96 = L.circle(
+                [4.0, -72.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_14ca8ce5138d43a78e1e3351c599b8c8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b3752090eb164952b3485d12e0b7882d = $(`<div id="html_b3752090eb164952b3485d12e0b7882d" style="width: 100.0%; height: 100.0%;">Colombia has the following animals: Large White, </div>`)[0];
+            popup_14ca8ce5138d43a78e1e3351c599b8c8.setContent(html_b3752090eb164952b3485d12e0b7882d);
+        
+
+        circle_4e008c345f4649f28ef0f03459b93f96.bindPopup(popup_14ca8ce5138d43a78e1e3351c599b8c8)
+        ;
+
+        
+    
+    
+            var circle_15f29062c0dd42c2bbc508747623bab4 = L.circle(
+                [8.0, -5.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_49d8221b29c746cf82b11170abb9e382 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_68edae1121e74ca1b8abcb212c307935 = $(`<div id="html_68edae1121e74ca1b8abcb212c307935" style="width: 100.0%; height: 100.0%;">Côte d'Ivoire has the following animals: Local Geese of Côte d'Ivoire, </div>`)[0];
+            popup_49d8221b29c746cf82b11170abb9e382.setContent(html_68edae1121e74ca1b8abcb212c307935);
+        
+
+        circle_15f29062c0dd42c2bbc508747623bab4.bindPopup(popup_49d8221b29c746cf82b11170abb9e382)
+        ;
+
+        
+    
+    
+            var circle_c719b079834f4eb499a09bff4d0c4c2d = L.circle(
+                [-1.0, 12.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_26caa320d7264c309d9fa419d358ff7d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9d7ebfd14828456a86fe30db452f363f = $(`<div id="html_9d7ebfd14828456a86fe30db452f363f" style="width: 100.0%; height: 100.0%;">Gabon has the following animals: Bourbonnaise, Large White, </div>`)[0];
+            popup_26caa320d7264c309d9fa419d358ff7d.setContent(html_9d7ebfd14828456a86fe30db452f363f);
+        
+
+        circle_c719b079834f4eb499a09bff4d0c4c2d.bindPopup(popup_26caa320d7264c309d9fa419d358ff7d)
+        ;
+
+        
+    
+    
+            var circle_a08c542554f247c0b2c517590b054dea = L.circle(
+                [47.0, 20.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_71330f475bbc4c27832fcbd41352e5dc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b24c9282ed3e4af8a2d317237f5a19d5 = $(`<div id="html_b24c9282ed3e4af8a2d317237f5a19d5" style="width: 100.0%; height: 100.0%;">Hungary has the following animals: White Goose of Zagyvarékas, Grimaud G 35, Hungarian Goose of Orosháza, Improved Hungarian Goose of Babat, Hungarian White, Kun Goose, Maxipalm, Dunai Lúd Magyar Egyes, Kolos Grey, Kolos Pannon, Grey Landes of Babat, White Goose of Szentes, Magyar lúd, Grey Goose of Orosháza, Gourmand SI 14, Golden Goose W, Hungaviy Brown Goose Hybrid, Mezohék DC, Grey Landes of Bábolna, Landeszi, Medioplam, Ditmarsch, Fodrostollú lúd, Grimaud G 36, White Kolos, White Emden of bábolna, Hungavis Combi, Giant White of Andocs, Hortobágyi fehér lúd, Improoved Goose of Komád, Lippitsch Goose Hybrid, Goose of Babat, </div>`)[0];
+            popup_71330f475bbc4c27832fcbd41352e5dc.setContent(html_b24c9282ed3e4af8a2d317237f5a19d5);
+        
+
+        circle_a08c542554f247c0b2c517590b054dea.bindPopup(popup_71330f475bbc4c27832fcbd41352e5dc)
+        ;
+
+        
+    
+    
+            var circle_a92790af1e6f4d079580a6c7a0186648 = L.circle(
+                [49.6, 6.11667],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_5dbb63d09cf3455580c1fd3b957345cd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_96f8a85b9f1d4b3ca462835dfc1bf38f = $(`<div id="html_96f8a85b9f1d4b3ca462835dfc1bf38f" style="width: 100.0%; height: 100.0%;">Luxembourg has the following animals: Höckergänse, Italian, </div>`)[0];
+            popup_5dbb63d09cf3455580c1fd3b957345cd.setContent(html_96f8a85b9f1d4b3ca462835dfc1bf38f);
+        
+
+        circle_a92790af1e6f4d079580a6c7a0186648.bindPopup(popup_5dbb63d09cf3455580c1fd3b957345cd)
+        ;
+
+        
+    
+    
+            var circle_970063b3a5c84757acb536c7616037e5 = L.circle(
+                [46.0, 25.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_4a439c3e1d514f28a6cf01f7b402214f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_efe0e0e8d7084344b17dac0493c796c0 = $(`<div id="html_efe0e0e8d7084344b17dac0493c796c0" style="width: 100.0%; height: 100.0%;">Romania has the following animals: Large White, </div>`)[0];
+            popup_4a439c3e1d514f28a6cf01f7b402214f.setContent(html_efe0e0e8d7084344b17dac0493c796c0);
+        
+
+        circle_970063b3a5c84757acb536c7616037e5.bindPopup(popup_4a439c3e1d514f28a6cf01f7b402214f)
+        ;
+
+        
+    
+    
+            var circle_b58f11d299674984bac0179d5a65e14a = L.circle(
+                [45.8, 16.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_e5b40dbdef7447248b837fcff0ca4d97 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6faf146206aa4689865655a6c09bbb9f = $(`<div id="html_6faf146206aa4689865655a6c09bbb9f" style="width: 100.0%; height: 100.0%;">Croatia has the following animals: Large White, Dravska, </div>`)[0];
+            popup_e5b40dbdef7447248b837fcff0ca4d97.setContent(html_6faf146206aa4689865655a6c09bbb9f);
+        
+
+        circle_b58f11d299674984bac0179d5a65e14a.bindPopup(popup_e5b40dbdef7447248b837fcff0ca4d97)
+        ;
+
+        
+    
+    
+            var circle_1a33650d399d4d39903b2a4d9e171866 = L.circle(
+                [19.0, -72.3333],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_2dcc444ba8de43eabfb5031a84c175b2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d58a97d4c4a042218f86a5bd05eb0ec8 = $(`<div id="html_d58a97d4c4a042218f86a5bd05eb0ec8" style="width: 100.0%; height: 100.0%;">Haiti has the following animals: Large White, </div>`)[0];
+            popup_2dcc444ba8de43eabfb5031a84c175b2.setContent(html_d58a97d4c4a042218f86a5bd05eb0ec8);
+        
+
+        circle_1a33650d399d4d39903b2a4d9e171866.bindPopup(popup_2dcc444ba8de43eabfb5031a84c175b2)
+        ;
+
+        
+    
+    
+            var circle_cdea6f5da8534f62ae0f8ba8660dae39 = L.circle(
+                [-5.0, 120.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_e8e46cc6330244c3afe280e28819bcbd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f040b8997e224337ba93c06255d61cdc = $(`<div id="html_f040b8997e224337ba93c06255d61cdc" style="width: 100.0%; height: 100.0%;">Indonesia has the following animals: angsa-Putih, </div>`)[0];
+            popup_e8e46cc6330244c3afe280e28819bcbd.setContent(html_f040b8997e224337ba93c06255d61cdc);
+        
+
+        circle_cdea6f5da8534f62ae0f8ba8660dae39.bindPopup(popup_e8e46cc6330244c3afe280e28819bcbd)
+        ;
+
+        
+    
+    
+            var circle_a8bd4fffb45a4d76995cb658a28d8bc3 = L.circle(
+                [50.0833, 15.5],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_fb613b5452f640849747757e69dba60c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5e4c395baf0840b79b4308ea187a3bde = $(`<div id="html_5e4c395baf0840b79b4308ea187a3bde" style="width: 100.0%; height: 100.0%;">Czech Republic has the following animals: Ceska husa, Ceska husa chocholata, Novohradská husa, </div>`)[0];
+            popup_fb613b5452f640849747757e69dba60c.setContent(html_5e4c395baf0840b79b4308ea187a3bde);
+        
+
+        circle_a8bd4fffb45a4d76995cb658a28d8bc3.bindPopup(popup_fb613b5452f640849747757e69dba60c)
+        ;
+
+        
+    
+    
+            var circle_2cad4f208ade4987b07b0216701f868a = L.circle(
+                [40.0, -4.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_db0cf9baf70646e9bf8d5d18e303c7fa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c52f15333f42467fbc696698638699c9 = $(`<div id="html_c52f15333f42467fbc696698638699c9" style="width: 100.0%; height: 100.0%;">Spain has the following animals: Euskal Antzara, Large White, Oca Empordanesa, </div>`)[0];
+            popup_db0cf9baf70646e9bf8d5d18e303c7fa.setContent(html_c52f15333f42467fbc696698638699c9);
+        
+
+        circle_2cad4f208ade4987b07b0216701f868a.bindPopup(popup_db0cf9baf70646e9bf8d5d18e303c7fa)
+        ;
+
+        
+    
+    
+            var circle_4e194c0cded94a9e81d200544e2fe8ab = L.circle(
+                [35.0, 103.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_a7eae1850c524d7998c7f337369a36b2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_35f8f816764547e29c3f6cbc42582b45 = $(`<div id="html_35f8f816764547e29c3f6cbc42582b45" style="width: 100.0%; height: 100.0%;">China has the following animals: Yan, Baizki, Youjiang, Brown Chinese, Yunnan Goose, Pingba gray goose, Xingguo Greyi, Guangfeng Bailing, Lingxian White, Daozhou gray goose, Yongkang Grey, Huoyane, Taihu, Yangjiang, Wugang Copper, White Chinese, Zi, Changle, Zhijin White, Fengcheng Grey, Magang, Wuzong, Yili, Dingan goose, Lion Head, Xupu, Gang, Sichuan White, Wanxi White, Minbei White, Lianhua White, Shitou, Zhedong White, </div>`)[0];
+            popup_a7eae1850c524d7998c7f337369a36b2.setContent(html_35f8f816764547e29c3f6cbc42582b45);
+        
+
+        circle_4e194c0cded94a9e81d200544e2fe8ab.bindPopup(popup_a7eae1850c524d7998c7f337369a36b2)
+        ;
+
+        
+    
+    
+            var circle_d9fb97505b4c4a228413d21559baf2ee = L.circle(
+                [46.0, 105.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_c4196e7d331d4f8c9936957406851bf8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7d8486c530a74b378078de2f9517514c = $(`<div id="html_7d8486c530a74b378078de2f9517514c" style="width: 100.0%; height: 100.0%;">Mongolia has the following animals: Mongolian Local Goose, </div>`)[0];
+            popup_c4196e7d331d4f8c9936957406851bf8.setContent(html_7d8486c530a74b378078de2f9517514c);
+        
+
+        circle_d9fb97505b4c4a228413d21559baf2ee.bindPopup(popup_c4196e7d331d4f8c9936957406851bf8)
+        ;
+
+        
+    
+    
+            var circle_1ed75dfe8c09469f8ec0961e0b3b5642 = L.circle(
+                [57.0, 25.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_d22fc2b2bdcd40f3be3aa92916de9267);
+        
+    
+        var popup_5a04f74beff74dbb91ffa1045e40326d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c542a4a9fe96437bb51198c9fe5d742f = $(`<div id="html_c542a4a9fe96437bb51198c9fe5d742f" style="width: 100.0%; height: 100.0%;">Latvia has the following animals: Temps, Landu, Large White, </div>`)[0];
+            popup_5a04f74beff74dbb91ffa1045e40326d.setContent(html_c542a4a9fe96437bb51198c9fe5d742f);
+        
+
+        circle_1ed75dfe8c09469f8ec0961e0b3b5642.bindPopup(popup_5a04f74beff74dbb91ffa1045e40326d)
+        ;
+
+        
+    
+</script>
